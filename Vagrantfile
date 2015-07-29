@@ -9,6 +9,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/usr", "1"]
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/.", "1"]
+	vb.memory = 256
+	vb.cpus = 1
   end
   config.vm.box = "ubuntu_1404"
   config.vm.network "private_network", ip: "192.168.33.33"
